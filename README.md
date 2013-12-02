@@ -1,3 +1,10 @@
+This is a fork of https://github.com/fabaff/mqtt-panel
+
+# mqtt-panel for Galileo Sensors
+
+View VBAT, solar panel and resistor voltage published by mqtt-galileo-sensors in the Galileo Board. 
+
+
 # mqtt-panel
 
 A simple web interface which is able to subscribe to a MQTT topic and display
@@ -7,7 +14,7 @@ The screenshot shows an example how to keep track on what's going in your
 apartment or your house. It's not about controlling, this setup is about 
 observing various states.
 
-![screenshot](https://raw.github.com/fabaff/mqtt-panel/master/screenshot.png)
+![screenshot](https://raw.github.com/ismagom/mqtt-panel/master/screenshot.png)
 
 What to see `mqtt-panel` in action -> http://youtu.be/Qb0UJa9kf2g
 
@@ -46,15 +53,14 @@ A MQTT broker/server is needed to run on **localhost** on port **1883**.
 1. Make sure that your MQTT broker/server is running and listening.
 2. Launch `./runner.sh` which will start the node server incl. the web socket 
    on port 3000.
-3. Start the `./test-messages.py` script to publish test messages if you have
-   no other source for messages.
+3. Run the mqtt-galileo-sensors program in the Galileo Board, or publish MQTT messages manually.
 4. Open `index.html` with your browser.
 
 For manually sending messages to your MQTT broker/server you can use 
 `mosquitto_pub` from `mosquitto`.
 
 ```
-$ mosquitto_pub -h localhost -d -t home/front/door -m "false"
+$ mosquitto_pub -h localhost -d -t home/solar -m "100"
 ```
 To check if the messages are are ok, subscribe to the topic **home/#** with 
 `mosquitto_sub`.
