@@ -2,7 +2,7 @@ This is a fork of https://github.com/fabaff/mqtt-panel
 
 # mqtt-panel for Galileo Sensors
 
-View VBAT, solar panel and resistor voltage published by mqtt-galileo-sensors in the Galileo Board. 
+View VBAT, solar panel and resistor voltage published by https://github.com/ismagom/mqtt-galileo-solar in the Galileo Board. 
 
 
 # mqtt-panel
